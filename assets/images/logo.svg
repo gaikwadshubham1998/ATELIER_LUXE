@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <style>
+      .brand-title { font-family: 'Cormorant Garamond', Georgia, serif; font-size: 28px; font-weight: 600; letter-spacing: 6px; fill: #242424; }
+      .brand-sub { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 8px; font-weight: 500; letter-spacing: 5px; fill: #A99580; text-transform: uppercase; }
+      .brand-crest { fill: none; stroke: #C49F68; stroke-width: 1.5; }
+    </style>
+  </defs>
+  <!-- Architectural Monogram -->
+  <g transform="translate(10, 15)">
+    <polygon points="25,5 45,45 5,45" class="brand-crest" />
+    <line x1="15" y1="32" x2="35" y2="32" stroke="#C49F68" stroke-width="1.5" />
+    <circle cx="25" cy="22" r="3" fill="#C49F68" />
+  </g>
+  <!-- Text Wordmark -->
+  <text x="70" y="40" class="brand-title">ATELIER LUXE</text>
+  <text x="72" y="58" class="brand-sub">INTERIOR ARCHITECTURE</text>
+</svg>

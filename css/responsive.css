@@ -1,0 +1,393 @@
+/* =====================================================================
+   ATELIER LUXE INTERIORS - RESPONSIVE STYLES (responsive.css)
+   Breakpoints: 320px, 375px, 576px, 768px, 992px, 1200px, 1440px, 1600px+
+   ===================================================================== */
+
+/* Extra Large Screens (>= 1440px) */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1360px;
+  }
+  
+  .hero-headline {
+    font-size: 5.2rem;
+  }
+}
+
+/* Large Desktop & Laptops (< 1200px) */
+@media (max-width: 1199.98px) {
+  .nav-menu {
+    gap: 1.3rem;
+  }
+  
+  .nav-link-custom {
+    font-size: 0.8rem;
+  }
+
+  .btn-header-cta {
+    padding: 0.55rem 1rem;
+    font-size: 0.74rem;
+  }
+}
+
+/* Tablets and Medium Screens (< 992px) */
+@media (max-width: 991.98px) {
+  .nav-menu,
+  .header-actions .btn-header-cta {
+    display: none;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .site-header {
+    padding: 1rem 0;
+  }
+
+  .site-header.header-scrolled {
+    padding: 0.75rem 0;
+  }
+
+  .section-padding {
+    padding: 4.5rem 0;
+  }
+
+  .section-padding-sm {
+    padding: 3rem 0;
+  }
+
+  .editorial-quote-badge {
+    position: static;
+    margin-top: 1.5rem;
+    max-width: 100%;
+  }
+
+  .process-step-line {
+    display: none;
+  }
+
+  .process-step-item {
+    border-left: 2px solid var(--color-warm-taupe);
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .calculator-card {
+    padding: 1.8rem;
+  }
+
+  .inquiry-form-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .calc-result-summary {
+    margin-top: 2rem;
+  }
+}
+
+/* Small Tablets and Large Phones (< 768px) */
+@media (max-width: 767.98px) {
+  .brand-logo .brand-main {
+    font-size: 1.35rem;
+  }
+
+  .brand-logo .brand-sub {
+    font-size: 0.55rem;
+  }
+
+  .hero-editorial {
+    padding: 6.5rem 0 3.5rem;
+    min-height: 85vh;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  .filter-button-group {
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-btn {
+    padding: 0.45rem 1rem;
+    font-size: 0.72rem;
+  }
+
+  .project-overlay-content {
+    padding: 1.25rem;
+  }
+
+  .project-overlay-title {
+    font-size: 1.35rem;
+  }
+
+  .project-card-actions {
+    opacity: 1;
+    transform: translateY(0);
+    margin-top: 0.6rem;
+  }
+
+  .floating-actions-container {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    gap: 0.6rem;
+  }
+
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+
+  .floating-tooltip {
+    display: none; /* Hide hover tooltip on touch devices */
+  }
+
+  .lightbox-prev {
+    left: 0.5rem;
+  }
+
+  .lightbox-next {
+    right: 0.5rem;
+  }
+
+  .lightbox-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.25rem;
+  }
+}
+
+/* Compact Mobile Screens (< 576px - iPhone, Android) */
+@media (max-width: 575.98px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+
+  .btn-luxury {
+    width: 100%;
+    padding: 0.85rem 1.5rem;
+  }
+
+  .btn-luxury-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .calc-selector-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .calc-radio-label {
+    padding: 0.65rem 0.35rem;
+    font-size: 0.78rem;
+  }
+
+  .inquiry-step-indicator {
+    margin-bottom: 1.75rem;
+  }
+
+  .step-label {
+    font-size: 0.65rem;
+    display: none; /* Hide label text on tiny screens, show circles only */
+  }
+
+  .step-node.active .step-label {
+    display: block; /* Show active label only */
+  }
+
+  .package-card {
+    padding: 1.8rem 1.4rem;
+  }
+
+  .package-price-number {
+    font-size: 2.3rem;
+  }
+
+  /* Comparison table responsive touch scrolling */
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.65rem;
+    font-size: 0.78rem;
+  }
+
+  .comparison-table th:first-child,
+  .comparison-table td:first-child {
+    min-width: 130px;
+    font-size: 0.8rem;
+    position: sticky;
+    left: 0;
+    z-index: 5;
+  }
+}
+
+/* Very Small Screens (<= 360px - Older phones) */
+@media (max-width: 360px) {
+  .brand-logo .brand-main {
+    font-size: 1.15rem;
+  }
+
+  .hero-headline {
+    font-size: 2.2rem;
+  }
+
+  .calc-selector-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Safe Area Insets for iOS Home Indicator */
+@supports (padding: max(0px)) {
+  .floating-actions-container {
+    bottom: max(1.25rem, env(safe-area-inset-bottom));
+    right: max(1.25rem, env(safe-area-inset-right));
+  }
+  
+  .site-footer {
+    padding-bottom: max(2.5rem, calc(1.5rem + env(safe-area-inset-bottom)));
+  }
+}
+
+/* Expertise Slider Responsive Overrides */
+@media (max-width: 991.98px) {
+  .expertise-catalog-section {
+    padding: 4.5rem 0 5rem;
+  }
+  .expertise-media-frame {
+    height: 250px;
+  }
+  .expertise-floating-next {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .expertise-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+  .expertise-header-controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .expertise-media-frame {
+    height: 240px;
+  }
+  .expertise-card-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+  .btn-expertise-quickview,
+  .btn-expertise-enquire {
+    height: 38px;
+    font-size: 0.70rem;
+    padding: 0 0.35rem;
+  }
+  .catalog-modal .modal-body {
+    padding: 1.2rem;
+  }
+  .catalog-modal-media {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise-card-actions {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+  }
+  .btn-expertise-quickview,
+  .btn-expertise-enquire {
+    font-size: 0.67rem;
+    padding: 0 0.25rem;
+    gap: 0.2rem;
+  }
+  .expertise-filter-pill {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.75rem;
+  }
+  .expertise-slider-footer {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .expertise-slide-next-hint,
+  .expertise-slider-footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Interactive Images Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .interactive-before-after {
+    aspect-ratio: 16 / 11;
+  }
+  .hotspot-detail-card {
+    max-width: calc(100% - 2.5rem);
+    left: 1.25rem;
+    bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .interactive-before-after {
+    aspect-ratio: 4 / 3;
+  }
+  .ba-badge {
+    padding: 0.3rem 0.65rem;
+    font-size: 0.65rem;
+  }
+  .ba-handle-circle {
+    width: 38px;
+    height: 38px;
+    font-size: 0.82rem;
+  }
+  .ba-preset-tab {
+    padding: 0.45rem 1rem;
+    font-size: 0.74rem;
+  }
+  .hotspot-pin {
+    width: 28px;
+    height: 28px;
+    margin-left: -14px;
+    margin-top: -14px;
+  }
+  .hotspot-dot {
+    width: 20px;
+    height: 20px;
+    font-size: 0.65rem;
+  }
+  .hotspot-detail-card {
+    padding: 1.15rem;
+  }
+  .hotspot-title {
+    font-size: 1.1rem;
+  }
+  .hotspot-desc {
+    font-size: 0.78rem;
+  }
+  .lightbox-controls {
+    right: 4.2rem;
+  }
+  .lightbox-ctrl-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+}
+
+
+

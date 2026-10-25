@@ -1,0 +1,104 @@
+/* =====================================================================
+   ATELIER LUXE INTERIORS - ANIMATIONS & TRANSITIONS (animations.css)
+   GSAP Support + CSS Keyframes & Fallback Transitions
+   ===================================================================== */
+
+/* Subtle Entry Animations */
+.reveal-fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-fade-in {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.reveal-fade-in.is-visible {
+  opacity: 1;
+}
+
+/* Stagger Delays */
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
+.delay-4 { transition-delay: 0.4s; }
+
+/* Gentle pulse for floating WhatsApp button */
+@keyframes pulseGentle {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.floating-whatsapp {
+  animation: pulseGentle 2.6s infinite ease-out;
+}
+
+/* Image reveal curtain effect */
+.curtain-reveal-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.curtain-reveal-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-warm-ivory);
+  transform: translateY(0);
+  transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 2;
+}
+
+.curtain-reveal-wrapper.is-visible::after {
+  transform: translateY(101%);
+}
+
+/* Shimmer placeholder loading state */
+@keyframes shimmerAnim {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skeleton-loading {
+  background: linear-gradient(90deg, #ece9e4 25%, #f7f5f0 50%, #ece9e4 75%);
+  background-size: 200% 100%;
+  animation: shimmerAnim 1.5s infinite;
+}
+
+/* Accessibility: Respect user reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-fade-up,
+  .reveal-fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .floating-whatsapp {
+    animation: none !important;
+  }
+}
